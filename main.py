@@ -1,7 +1,5 @@
 def sum_prime_divisors(n):
-    """
-    Функция 1: Находит сумму простых делителей числа.
-    """
+    """ Функция 1: Находит сумму простых делителей числа."""
     if n <= 1:
         return 0
 
@@ -23,6 +21,16 @@ def sum_prime_divisors(n):
             divisors_sum += i
 
     return divisors_sum
+
+def count_odd_digits_greater_than_three(n):
+    """Функция 2: Находит количество нечетных цифр числа, больших 3."""
+    count = 0
+    for digit in str(abs(n)):
+        digit_int = int(digit)
+        if digit_int % 2 != 0 and digit_int > 3:
+            count += 1
+    return count
+
 
 
 # Тест функции
